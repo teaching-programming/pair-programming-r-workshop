@@ -49,9 +49,6 @@ Thumbs.db
 # R Environment Variables
 .Renviron
 
-# pkgdown site
-docs/
-
 # translation temp files
 po/*~
 
