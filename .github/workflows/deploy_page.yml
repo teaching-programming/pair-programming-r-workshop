@@ -40,9 +40,8 @@ jobs:
           # Commit and push changes
           git add .
           git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
-          git push --set-upstream origin gh-pages
-
-
+          git push --force "https://${{ secrets.DEPLOY_TOKEN_PAGES }}@github.com/${{ github.repository }}.git" gh-pages
+  
         
       
       
