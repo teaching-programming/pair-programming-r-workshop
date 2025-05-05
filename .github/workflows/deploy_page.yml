@@ -23,8 +23,6 @@ jobs:
           
           # Switch to the gh-pages branch or create it
           git fetch origin main || true
-          git branch -d gh-pages || true
-          git switch gh-pages || git switch --create gh-pages
 
       - name: Install packages
         uses: r-lib/actions/setup-r-dependencies@v2
@@ -38,6 +36,8 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           # Commit and push changes
+          git branch -d gh-pages || true
+          git switch gh-pages || git switch --create gh-pages
           git add .
           git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
           git push --force "https://${{ secrets.DEPLOY_TOKEN_PAGES }}@github.com/${{ github.repository }}.git" gh-pages
