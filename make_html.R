@@ -1,12 +1,15 @@
 # install.packages("htmltools")
 library(htmltools)
 
+# No need to run this code ever, it gets run by github action
+
+# first: helper functions
+
 height_of_exercise <- "800px"
 
 wrap_in_html <- function(page_name, page_description, some_code){
   paste0("<!DOCTYPE html><html><body><h1>",page_name,"</h1><p>",page_description,"</p>",some_code,"</body></html>")
 }
-
 
 code_file_as_encoded_string <- function(file_path){
   file_content <- readLines(file_path, encoding = "UTF-8")
@@ -20,6 +23,15 @@ exercise_html <- function(exercise_name, exercise_description, exercise_code_sou
   code_iframe <- paste0("<iframe width='100%' height='",height_of_exercise,"' src='https://rdrr.io/snippets/embed/?code=",code_html_encoded,"' frameborder='0'></iframe>")
   paste0("<div height='",height_of_exercise,"'><h1>",exercise_name,"</h1><p>",exercise_description,"</p>",code_iframe,"</div>")
 }
+
+save_to_file <- function(filename, string_to_save){
+  file_connection<-file(filename)
+  writeLines(string_to_save, file_connection)
+  close(file_connection)
+}
+
+# HERE EDIT exercise names, descriptions etc. 
+
 
 assemble_whole_page <- function(){
   #TODO: use loop to do this once? but that could be c()s in c()s, grrr
@@ -36,10 +48,6 @@ assemble_whole_page <- function(){
 
 full_page_html <- assemble_whole_page()
 
-save_to_file <- function(filename, string_to_save){
-  file_connection<-file(filename)
-  writeLines(string_to_save, file_connection)
-  close(file_connection)
-}
+
 
 save_to_file(file.path('docs','index.html'), full_page_html)
