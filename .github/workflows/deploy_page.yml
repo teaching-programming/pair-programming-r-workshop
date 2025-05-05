@@ -2,6 +2,9 @@ on:
   push:
     branches: main
 
+permissions:
+  contents: write
+  
 jobs:
   refresh-html-outputs:
     runs-on: ubuntu-latest
@@ -36,11 +39,13 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           # Commit and push changes
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git branch -d gh-pages || true
           git switch gh-pages || git switch --create gh-pages
           git add .
           git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
-          git push --force "https://${{ secrets.DEPLOY_TOKEN_PAGES }}@github.com/${{ github.repository }}.git" gh-pages
+          git push --force "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
   
         
       
