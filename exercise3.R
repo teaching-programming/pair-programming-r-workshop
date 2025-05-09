@@ -30,7 +30,7 @@ library(purrr)
 # uncomment the code below to get started. The 2nd argument of `map_chr()` is the function to be applied 
 # map_chr(values, ____)
 
-# Notice, values is a vector with 5 elements, and the output of the map_chr function is a character vector with 5 elements! That is, the result of `categorize_value()` being applied to each element in the `values` vector. 
+# Notice, `values` is a vector with 5 elements, and the output of the map_chr function is a character vector with 5 elements! That is, the result of `categorize_value()` being applied to each element in the `values` vector. 
 
-# Note of interest: In Exercise 2.3 the short-circuiting OR operator was used (||) as if is not vectorized/is a short-circuited operation. If || is used in a vectorized function, it will remove the vectorized properties of the function - so be careful!
+# Note of interest: In Exercise 2.3 the short-circuiting OR operator was used (||) as if statements are not vectorized/are a short-circuited operation. If || is used in a vectorized function, it will remove the vectorized properties of the function - so be careful!
 
