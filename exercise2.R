@@ -1,4 +1,4 @@
-#### Exercise 2.1: Create a function that called `is_equal` that determines if 2 numeric inputs are the same. Test if the function works as expected with the test below. ####
+#### Exercise 2.1: Create a function that called `is_equal` that determines if 2 numeric inputs are the same. Test if the function works as expected with the tests below. ####
 
 is_equal <- function (____, ____){
   if(_____ == ____)
