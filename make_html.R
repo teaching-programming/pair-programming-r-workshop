@@ -35,7 +35,7 @@ save_to_file <- function(filename, string_to_save){
 
 assemble_whole_page <- function(){
   #TODO: use loop to do this once? but that could be c()s in c()s, grrr
-  exercise_1_html <- exercise_html("Exercise 1", "Your task here is to....", "exercise1.R" )
+  exercise_1_html <- exercise_html("Exercise 1: Unit conversion", "Your task here is to create functions that convert between metric and imperial systems.  The goal of this series of exercises is to understand functions better. Fill in the ____ with appropriate code.", "exercise1.R" )
   exercise_2_html <- exercise_html("Exercise 2", "Your task here is to....", "exercise2.R" )
   exercise_3_html <- exercise_html("Exercise 3", "Your task here is to....", "exercise3.R" )
   exercise_4_html <- exercise_html("Exercise 4", "Your task here is to....", "exercise4.R" )
