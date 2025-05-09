@@ -40,11 +40,12 @@ assemble_whole_page <- function(){
   exercise_2_html <- exercise_html("Exercise 2: Equality & Division", "In Exercise 1 we create 4 functions, 2 to convert temperature units and 2 to convert units of length. An even more ideal solution would be to have a single function that converted a numeric value depending on the conversion of interest (i.e., C_to_F, F_to_C, in_to_cm, or cm_to_in) - enter multiple arguments and conditional statements! We will also be using some test cases to determine if our functions work in the way we would expect.", 
                                    "exercise2.R" )
   exercise_3_html <- exercise_html("Exercise 3: Vectorization", "Your task here is to create a function called `categorize_value` that categorizes values based on the following conditions: less than 50 = low, less than or equal to 100 = medium, otherwise high.", "exercise3.R" )
-  exercise_4_html <- exercise_html("Exercise 4", "Your task here is to....", "exercise4.R" )
+  exercise_4_html <- exercise_html("Exercise 4: Functions wit Plots", "In this exercise, we will be using a function to programmatically change the colors of a plot. With have some data called `fruit_data` about sales of different types of fruit, represented in a bar chart. Use a function to programmatically color the bars based on if the sales are considered 'low', 'medium', or 'high'.", 
+                                   "exercise4.R" )
   
   all_exercises_html <- paste0(exercise_1_html,exercise_2_html,exercise_3_html,exercise_4_html)
   
-  full_page <- wrap_in_html("Pair Pogramming Exercises", "Some explanation what this is about", all_exercises_html)
+  full_page <- wrap_in_html("Pair Pogramming Exercises", "In the following exercises, you will be working with your partner(s) through a series of exercises demonstrating how to write functions in R. Do not worry if you do not get through all of the exercises. Switch the driver and navigator(s) roles after each exercise.", all_exercises_html)
   return(full_page)
 }
 
