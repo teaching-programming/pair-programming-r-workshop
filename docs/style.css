@@ -1,0 +1,13 @@
+.exercise-hint{
+  width: 30%;
+  height: 800px;
+  float: left;
+}
+.exercise-code{
+  width: 70%;
+  height: 800px;
+  float: left;
+}
+h1{
+    clear: both;
+}
