@@ -13,3 +13,4 @@ result1 <- add( 4, 6)
 result2 <- add( 9, 7)
 result3 <- add( result1, result2 )
 
+Read the following code and discuss with your partner(s) what it does. 

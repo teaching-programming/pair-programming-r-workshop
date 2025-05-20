@@ -1,4 +1,4 @@
-## 1.1
+## Exercise 1.1
 
 number_of_full_dozens <- function( number_of_eggs ) {
   full_dozens <- number_of_eggs %/% 12 # %/% means "divide and keep integer"
@@ -15,7 +15,7 @@ is_first_larger <- function( first, second ) {
   return(first > second)
 }
 
-print("below should return: false, true, false")
+print("below should return: FALSE, TRUE, FALSE")
 print(is_first_larger(11,12))
 print(is_first_larger(12,11))
 print(is_first_larger(12,12))
