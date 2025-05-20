@@ -10,6 +10,6 @@ which_is_larger <- function ( give_this_better_name , and_this_too ){
 }
 
 print("below should return strings: 'second','first','they're the same!'")
-print(which_is_larger(4, 5))
-print(which_is_larger(5, 4))
-print(which_is_larger(5, 5))
+which_is_larger(4, 5)
+which_is_larger(5, 4)
+which_is_larger(5, 5)

@@ -4,7 +4,7 @@
 
 
 print("below should return: 3,10,25,99")
-print(convert_length_INtoCM(1))
-print(convert_length_INtoCM(4))
-print(convert_length_INtoCM(10))
-print(convert_length_INtoCM(39))
+convert_length_INtoCM(1)
+convert_length_INtoCM(4)
+convert_length_INtoCM(10)
+convert_length_INtoCM(39)

@@ -4,7 +4,7 @@
 
 
 print("below should return: -18,-12,3,38")
-print(convert_temp_FtoC(0))
-print(convert_temp_FtoC(10))
-print(convert_temp_FtoC(37))
-print(convert_temp_FtoC(100))
+convert_temp_FtoC(0)
+convert_temp_FtoC(10)
+convert_temp_FtoC(37)
+convert_temp_FtoC(100)
