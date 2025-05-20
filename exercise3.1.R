@@ -9,6 +9,9 @@ twice(2)
 twice(44)
 # your tests here 
 
+
+
+
 is_positive <- function(num){
   if(num > 0){
     return(TRUE)

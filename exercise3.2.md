@@ -1,6 +1,6 @@
 ## Exercise 3.2
 
-copy-paste your solution to 3.1 and one at the time, uncomment the tests ONE AT THE TIME and see what happens. Discuss with your partner(s).
+Copy-paste your solution to 3.1 and one at the time, uncomment the tests ONE AT THE TIME and see what happens. Discuss with your partner(s).
  
  
  

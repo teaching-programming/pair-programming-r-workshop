@@ -55,8 +55,8 @@ assemble_whole_page <- function(){
   exercises_html <- append(exercises_html, exercise_html("Exercise 1.3: Unit conversion", "exercise1.3" ))
   exercises_html <- append(exercises_html, exercise_html("Exercise 1.4: Unit conversion", "exercise1.4"))
 
-  exercises_html <- append(exercises_html, exercise_html("Exercise 2.1: Functions", "exercise2.1" ))
-  exercises_html <- append(exercises_html, exercise_html("Exercise 2.2: Functions", "exercise2.2" ))
+  exercises_html <- append(exercises_html, exercise_html("Exercise 2.1: Functions with Multiple Arguments", "exercise2.1" ))
+  exercises_html <- append(exercises_html, exercise_html("Exercise 2.2: Functions with Multiple Arguments", "exercise2.2" ))
 
   exercises_html <- append(exercises_html, exercise_html("Exercise 3.1: Functions and Vectorisation", "exercise3.1" ))
   exercises_html <- append(exercises_html, exercise_html("Exercise 3.2: Functions and Vectorisation", "exercise3.2"))
