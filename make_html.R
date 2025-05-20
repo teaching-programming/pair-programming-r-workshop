@@ -60,7 +60,6 @@ assemble_whole_page <- function(){
 
   exercises_html <- append(exercises_html, exercise_html("Exercise 3.1: Functions and Vectorisation", "exercise3.1" ))
   exercises_html <- append(exercises_html, exercise_html("Exercise 3.2: Functions and Vectorisation", "exercise3.2"))
-  exercises_html <- append(exercises_html, exercise_html("Exercise 3.3: Functions and Vectorisation", "exercise3.3" ))
 
   exercises_html <- append(exercises_html, exercise_html("Exercise 4.1: Functions and Graphs", "exercise4.1" ))
   exercises_html <- append(exercises_html, exercise_html("Exercise 4.2: Functions and Graphs", "exercise4.2" ))

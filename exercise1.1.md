@@ -1,4 +1,4 @@
-# Solved Example 1.1: Functions in R are 'code shortcuts' to common things you want to do.
+## Solved Example 1.1: Functions in R are 'code shortcuts' to common things you want to do.
 
 Functions 'take' some inputs/variables in round brackets; then perform some operations on those inputs in { } and then return one value with return(...).
 
