@@ -19,7 +19,7 @@ values <- c(45, -60, 150, -85, 20)
 #twice(values)
 #is_positive(values)
 
-#map_chr(values, twice)
-#map_chr(values, is_positive)
+#map_dbl(values, twice)
+#map_lgl(values, is_positive)
 
 
