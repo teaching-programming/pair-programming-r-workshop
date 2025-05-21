@@ -1,6 +1,16 @@
 # Exercise 3.2: 
 
-# Copy solution to Exercise 3.1 here 
+twice <- function(num){
+  return(num *2) 
+}
+
+is_positive <- function(num){
+  if(num > 0){
+    return(TRUE)
+  } else{
+    return(FALSE)
+  }
+}
 
 # uncomment the tests ONE AT THE TIME and see what happens.
 
