@@ -5,7 +5,7 @@ One at the time, uncomment the tests ONE AT THE TIME and see what happens. Discu
 ~ Only after running the tests and exploring the output, read below ~ 
 
 
-... oh no, an error! ...
+... oh no, a warning and unexpected result! ...
 
 Not to to fear! Enter the map family of functions from the {purrr} package.
 

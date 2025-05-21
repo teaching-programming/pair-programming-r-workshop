@@ -1,4 +1,5 @@
 # Exercise 3.2: 
+library(purrr)
 
 twice <- function(num){
   return(num *2) 
@@ -18,7 +19,7 @@ values <- c(45, -60, 150, -85, 20)
 #twice(values)
 #is_positive(values)
 
-#map_chr(twice, values)
-#map_chr(is_positive, values)
+#map_chr(values, twice)
+#map_chr(values, is_positive)
 
 
