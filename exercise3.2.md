@@ -1,17 +1,9 @@
 ## Exercise 3.2
 
-Copy-paste your solution to 3.1 and one at the time, uncomment the tests ONE AT THE TIME and see what happens. Discuss with your partner(s).
+One at the time, uncomment the tests ONE AT THE TIME and see what happens. Discuss with your partner(s).
  
- 
- 
- 
- 
-~ read the below after running the tests one at a time and exploring the output ~ 
- 
- 
- 
- 
- 
+~ Only after running the tests and exploring the output, read below ~ 
+
 
 ... oh no, an error! ...
 
