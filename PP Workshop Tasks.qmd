@@ -1,0 +1,356 @@
+---
+title: "Pair Programming R Workshop Tasks"
+format: html
+---
+
+# Pair Programming Exercises 
+
+In the following exercises, you will be working with your partner(s) through a series of exercises demonstrating how to write functions in R.
+
+Do not worry if you do not get through all of the exercises. Switch the driver and navigator(s) roles after each exercise.
+
+# Task 1 
+## 1.1 Warmup (what are functions)
+
+**Solved** Exercise 1.1: Functions in R are 'code shortcuts' to common things you want to do.
+
+Functions 'take' some inputs/variables in round brackets; then perform some operations on those inputs in `{ }` and then return one value with `return(...)`. Explicit returns by calling the `return()` function are optional/stylistic, you could also call the result object. 
+
+```{r}
+#| label: pseudo-code-function
+#| eval: false 
+
+add <- function( first_argument, second_argument ) {
+  result <- first_argument + second_argument
+  return(result)
+}
+```
+
+Once defined, you can use your function ('run it') many times with different inputs. This saves you copy-pasting code.
+
+```{r}
+#| label: pseudo-code-function-use
+#| eval: false 
+
+result1 <- add( 4, 6 )
+result2 <- add( 9, 7 )
+result3 <- add( result1, result2 )
+```
+
+Read the following code and discuss with your partner(s) what it does.
+
+```{r}
+#| label: exercise1-1a
+
+# Function 1: number_of_full_dozens 
+
+number_of_full_dozens <- function(number_of_eggs) {
+  full_dozens <- number_of_eggs %/% 12 # %/% means "divide and keep integer"
+  return(full_dozens)
+}
+
+print("below should return: 0, 1, 2, 8")
+number_of_full_dozens(11) # 0
+number_of_full_dozens(12) # 1 
+number_of_full_dozens(25) # 2 
+number_of_full_dozens(100) # 8 
+```
+
+```{r}
+#| label: exercise1-1b
+
+# Function 2: is_first_larger 
+
+is_first_larger <- function( first, second ) {
+  return(first > second)
+}
+
+print("below should return: FALSE, TRUE, FALSE")
+is_first_larger(11,12) # FALSE
+is_first_larger(12,11) # TRUE
+is_first_larger(12,12) # FALSE 
+```
+
+> Switch who is driver now! 
+
+## 1.2: Unit conversion: Temperature 
+
+Create a function called `convert_temperature_CtoF` that takes a numeric value (a temperature in Celsius) as the argument, and returns the temperature in Fahrenheit. 
+
+To get Fahrenheit you need to multiply Celsius by 9, then divide by 5 and then add 32.
+
+e.g., 10 Celsius is 50 Fahrenheit because 10 * 9 / 5 + 32 = 50
+
+Return values rounded with `round()`
+
+```{r}
+#| label: exercise1-2 
+
+convert_temp_CtoF <- function( something ) {
+  result <- something + something
+  return(result)
+}
+
+print("below should return: 32, 50, 99, 212")
+convert_temp_CtoF(0) # 32
+convert_temp_CtoF(10) # 50 
+convert_temp_CtoF(37) # 99 
+convert_temp_CtoF(100) # 212 
+```
+
+> Switch who is driver now! 
+
+## 1.3 Unit Conversion: Temperature 
+
+Now create a function for conversion the other way called `convert_temp_FtoC` that takes a numeric value (a temperature in Fahrenheit) as the argument.
+
+To get this result, just flip the math from previous task. You can do it!
+
+Return values rounded with `round()`
+
+```{r}
+#| label: exercise1-3 
+
+# your code here
+
+
+print("below should return: -18, -12, 3, 38")
+convert_temp_FtoC(0) # -18 
+convert_temp_FtoC(10) # -12
+convert_temp_FtoC(37) # 3 
+convert_temp_FtoC(100) # 38 
+```
+
+> Switch who is driver now! 
+
+## 1.4 Unit Conversion: Measurement 
+
+Using your solutions above as a guide, create a function called `convert_length_INtoCM` that takes a numeric value (a unit of length in inches) as the argument.
+
+**HINT:** the inches to cm formula: cm = inches * 2.54
+
+```{r}
+#| label: exercise1-4 
+
+
+# your code here
+
+
+print("below should return: 3, 10, 25, 99")
+convert_length_INtoCM(1) # 3
+convert_length_INtoCM(4) # 10 
+convert_length_INtoCM(10) # 25
+convert_length_INtoCM(39) # 99 
+```
+
+> Switch who is driver now! 
+
+# Task 2 
+## 2.1 Functions with Multiple Arguments 
+
+Create a function called `which_is_larger` which determines which of the 2 numeric inputs is larger.
+
+Return a string describing what happened. See tests for the exact format of expected outputs.
+
+```{r}
+#| label: exercise2-1
+
+which_is_larger <- function ( give_this_better_name , and_this_too ){
+  if( ... )
+    return(...)
+  else if(...)
+    return(...)
+  else 
+    return(...)
+}
+
+print("below should return strings: 'second', 'first', 'they're the same!'")
+which_is_larger(4, 5) # second 
+which_is_larger(5, 4) # first 
+which_is_larger(5, 5) # they're the same! 
+```
+
+> Switch who is driver now! 
+
+## 2.2  Functions with Multiple Arguments 
+
+Create a function called `which_is_largest` that checks 3 numbers and tells you which one is largest by returning a character string "first", "second" or "third".
+
+If there are ANY two identical numbers, just return a string "oh no!"
+
+```{r}
+#| label: exercise2-2
+
+which_is_largest <- function ( first, second, third ){
+  return("banana")
+}
+
+print("below should return strings: 'oh no!', 'oh no!', 'oh no!'")
+which_is_largest(5, 5, 6) # oh no 
+which_is_largest(5, 6, 6) # oh no 
+which_is_largest(6, 6, 6) # oh no 
+
+print("below should return strings: 'third', 'second', 'first'")
+which_is_largest(4, 5, 6) # third
+which_is_largest(4, 50, 6) # second
+which_is_largest(40, 5, 6) # first
+
+```
+
+> Switch who is driver now! 
+
+# Task 3 
+## 3.1: Functions and Vectorisation
+
+Complete the two example functions `twice` and `is_positive` in the code chunks below 
+
+```{r}
+#| label: exercise3-1a 
+
+# Function 1: twice 
+
+twice <- function(num){
+  return(....) 
+}
+
+print("below should return: 4, 88")
+twice(2) # 4 
+twice(44) # 88 
+```
+
+```{r}
+#| label: exercise3-1b
+
+# Function 2: is_positive 
+is_positive <- function(num){
+  if(....){
+    return(....)
+  } else{
+    return(....)
+  }
+} 
+ 
+print("below should return: FALSE, TRUE")
+is_positive(-20) # FALSE
+is_positive(50) # TRUE
+```
+
+> Switch who is driver now! 
+
+## 3.2: Functions and Vectorisation
+
+Line by line, uncomment the tests **ONE AT THE TIME** and see what happens. Discuss with your partner(s).
+
+```{r}
+#| label: exercise3-2a
+
+twice <- function(num){
+  return(num *2) 
+}
+
+is_positive <- function(num){
+  if(num > 0){
+    return(TRUE)
+  } else{
+    return(FALSE)
+  }
+} 
+
+# uncomment the tests ONE AT THE TIME and see what happens.
+
+values <- c(45, -60, 150, -85, 20)
+# twice(values)
+# is_positive(values)
+```
+
+~ Only after running the tests and exploring the output, read below ~
+
+
+
+
+... oh no, an error! ...
+
+Not to to fear!
+
+Most functions in R are vectorized, meaning that the function will operate on all elements of a vector without needing to loop through and act on each element one at a time.
+
+if else statements are *NOT* vectorized, hence the above error. However, the `*` (multiplication operator) is vectorized, which is why the twice function works with the values vector!
+
+Vectorization is a real superpower of R! It makes writing code more concise, easy to read, and less error prone.
+
+There is a vectorized if else statement in R, `ifelse()`, which we show in the `is_positive_vectorized()` function as well below.
+
+```{r}
+#| label: exercise3-2b 
+
+# Vectorized solution 
+is_positive_vectorized <- function(num){
+  # either
+  ifelse(num > 0, TRUE, FALSE)
+  # or, even better, because > is vectorized, just
+  # num > 0
+}
+
+is_positive_vectorized(values)
+```
+
+> Switch who is driver now! 
+
+# Task 4 
+## 4.1: Functions and Plots 
+
+In this exercise, we will be using a function to programmatically change the colors of a plot. Have a look at the starting code, discuss what you think it does with your partner(s), and move on to the next section.
+
+```{r}
+#| label: exercise4-1-starter
+ 
+# Exercise 4.1: starting code.
+# Have a read and run it. What does it do?
+
+library(ggplot2)
+library(purrr)
+
+fruit_data <- data.frame(
+  fruit = c("Apples", "Bananas", "Cherries", "Blueberries", "Oranges"),
+  sales = c(100, 150, 8, 58, 90)
+)
+
+ggplot(data = fruit_data, aes(x = fruit, 
+                              y = sales)) + 
+  geom_col()
+```
+
+> Switch who is driver now! 
+
+## 4.2: It's your turn now!
+
+Create a function called `categorize_and_color` that takes a number as input and returns a character string with the name of a color (e.g., 'red', 'orange' or 'green') based on some logic (decide on the logic with your partner(s)). It's up to you to come up with the logic rules.
+
+All other code is already written for you - just complete the body of the function `categorize_and_color`.
+
+```{r}
+#| label: exercise4-2
+
+# START your code here. Maybe start with some 'testing prints'?
+
+categorize_and_color <- ....
+
+# END your code here.
+
+# and now we will use your function to add a column and then use that in the graph as our color fill aesthetic.
+fruit_data <- data.frame(
+  fruit = c("Apples", "Bananas", "Cherries", "Blueberries", "Oranges"),
+  sales = c(100, 150, 8, 58, 90)
+)
+
+fruit_data$sales_color <- map(fruit_data$sales, categorize_and_color)
+
+ggplot(data = fruit_data, aes(x = fruit, 
+                              y = sales,
+                              fill = sales_color)) + 
+  geom_col()
+```
+
+----
+
+That's all for now! 
