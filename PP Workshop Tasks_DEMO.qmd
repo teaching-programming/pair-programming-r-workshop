@@ -1,0 +1,35 @@
+---
+title: "Pair Programming R Workshop Tasks"
+subtitle: "DEMO"
+format: html
+---
+
+
+```{r}
+#| label: example-function
+#| eval: false 
+
+add <- function( first_argument, second_argument ) {
+  result <- first_argument + second_argument
+  return(result)
+}
+```
+
+```{r}
+#| label: example-function-use
+#| eval: false 
+
+result1 <- add( 4, 6 )
+result2 <- add( 9, 7 )
+result3 <- add( result1, result2 )
+```
+
+```{r}
+#| label: demo-1
+
+```
+
+```{r}
+#| label: demo-2
+
+```
