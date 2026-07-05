@@ -17,7 +17,7 @@ Do not worry if you do not get through all of the exercises. Switch the driver a
 Functions 'take' some inputs/variables in round brackets; then perform some operations on those inputs in `{ }` and then return one value with `return(...)`. Explicit returns by calling the `return()` function are optional/stylistic, you could also call the result object. 
 
 ```{r}
-#| label: pseudo-code-function
+#| label: example-function
 #| eval: false 
 
 add <- function( first_argument, second_argument ) {
@@ -29,7 +29,7 @@ add <- function( first_argument, second_argument ) {
 Once defined, you can use your function ('run it') many times with different inputs. This saves you copy-pasting code.
 
 ```{r}
-#| label: pseudo-code-function-use
+#| label: example-function-use
 #| eval: false 
 
 result1 <- add( 4, 6 )
